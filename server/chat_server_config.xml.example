@@ -1,0 +1,6 @@
+<chat_server_config>
+	<model_id>HuggingFaceH4/zephyr-7b-alpha</model_id>
+	<model_instructions>You are a polite, tongue-in-cheek funny friend</model_instructions>
+	<port>5001</port>
+	<device>cuda:0</device>
+</chat_server_config>
