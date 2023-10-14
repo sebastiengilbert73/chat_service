@@ -32,7 +32,7 @@ config = load_config()
 pipe = None
 if config.model_id == 'HuggingFaceH4/zephyr-7b-alpha':
     pipe = pipeline("text-generation", model=config.model_id, torch_dtype=torch.bfloat16,
-                    device_map="auto")
+                    device_map=config.device)
 else:
     raise NotImplementedError(f"chat_server.py: Not implemented model ID '{config.model_id}'")
 
