@@ -4,6 +4,7 @@ import subprocess
 import requests
 import xml.etree.ElementTree as ET
 import types
+import os
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)-15s %(levelname)s \t%(message)s')
 
@@ -16,6 +17,8 @@ async def on_chat_start():
     global config
 
     # Load the configuration file
+    if not os.path.exists("./app_config.xml"):
+        raise FileNotFoundError("on_chat_start(): Could not find file './app_config.xml'. Did you forget to copy and edit 'app_config.xml.example'?")
     config = load_configuration_file("./app_config.xml")
     logging.info(f"config = \n{config}")
 
