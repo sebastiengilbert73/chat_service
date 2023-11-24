@@ -1,0 +1,5 @@
+<app_config>
+	<LLMServiceUrl>http://127.0.0.1:5001</LLMServiceUrl>
+	<StartOfResponseMarker>&lt;|assistant|&gt;</StartOfResponseMarker>
+	<PromptSeed>You are a tongue-in-cheek assistant who politely answers the following question: </PromptSeed>
+</app_config>
