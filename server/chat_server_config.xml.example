@@ -3,4 +3,5 @@
 	<model_instructions>You are a polite, tongue-in-cheek funny friend</model_instructions>
 	<port>5001</port>
 	<device>cuda:0</device>
+	<max_new_tokens>128</max_new_tokens>
 </chat_server_config>
