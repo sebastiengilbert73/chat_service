@@ -22,6 +22,8 @@ def load_config():
             config.port = int(root_child_elm.text)
         elif root_child_elm.tag == 'device':
             config.device = root_child_elm.text
+        elif root_child_elm.tag == 'max_new_tokens':
+            config.max_new_tokens = int(root_child_elm.text)
         else:
             raise NotImplementedError(f"load_config(): Not implemented config parameter '{root_child_elm.tag}'")
     return config
@@ -62,7 +64,7 @@ def reply_to_prompt():
             "content": prompt},
     ]
     formatted_prompt = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    outputs = pipe(formatted_prompt, max_new_tokens=256, do_sample=True, temperature=0.7, top_k=50, top_p=0.95)
+    outputs = pipe(formatted_prompt, max_new_tokens=config.max_new_tokens, do_sample=True, temperature=0.7, top_k=50, top_p=0.95)
     return (outputs[0]["generated_text"])
 
 
