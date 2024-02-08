@@ -15,6 +15,6 @@ pip install https://github.com/jllllll/bitsandbytes-windows-webui/releases/downl
 pip install -r requirements.txt
 
 ## Server configuration
-Under .../chat_service/server/
-   cp chat_server_config.xml.example chat_server_config.xml
-   python chat_server.py
+Under .../chat_service/server/  
+cp chat_server_config.xml.example chat_server_config.xml  
+python chat_server.py  
