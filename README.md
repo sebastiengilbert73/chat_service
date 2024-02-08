@@ -18,3 +18,8 @@ pip install -r requirements.txt
 Under .../chat_service/server/  
 cp chat_server_config.xml.example chat_server_config.xml  
 python chat_server.py  
+
+## Chainlit web interface
+Under .../chat_service/chainlit_interface/  
+cp app_config.xml.example app_config.xml  
+chainlit run app.py -w  
