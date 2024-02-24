@@ -13,8 +13,7 @@ pip install -r requirements.txt
 ## Server configuration
 Under .../chat_service/server/  
 cp chat_server_config.xml.example chat_server_config.xml 
-### Edit chat_server_config.xml to your needs. If you don't use a GPU, make sure to change the device to:
-<device>cpu</device>
+### Edit chat_server_config.xml to your needs. If you don't use a GPU, make sure to change the device to cpu
 Note that without a GPU, the response may be very slow.
 
 ## Launch the server
