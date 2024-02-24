@@ -1,6 +1,5 @@
 numpy
 flask
 transformers
-llama-index
 accelerate
 chainlit
